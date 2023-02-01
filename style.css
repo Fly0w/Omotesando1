@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+/* Title of page */
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 30px;
+}
+
+/* Buttons */
+.container1 {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin: 20px 30px;
+    justify-content: center;
+}
+.button  {
+    margin: 0 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 33px;
+}
+.button:hover{
+    background-color: rgb(218, 199, 199);
+    opacity:1;
+}
+
+.button:active{
+    background-color: rgb(218, 199, 199);
+    opacity:0.7;
+}
+
+.activated {
+    border-color: rgb(15, 176, 168);
+}
+
+.inactive {
+    border-color: rgba(255, 255, 255, 0);
+}
+
+
+/* Date today */
+.datetoday{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Announcer */
+.announce{
+    margin: 10px 30px;
+    padding: 8px;
+    border: 5px solid #f20055;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.smalltitle{
+    font-size: 0.7rem;
+}
+.content{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.thisweekpart{
+    width: 50vw;
+    margin: 10px;
+}
+.prevnextweekpart {
+    width: 30vw;
+    margin: 10px;
+}
+ul{
+    list-style: none;
+}
+li {
+    font-size: 0.9rem;
+}
+.noncombustible{
+    color: rgb(0, 149, 255);
+}
+.combustible{
+    color: rgb(235, 151, 5);
+}
+.petbottle{
+    color: rgb(190, 62, 254);
+}
+.aluminumcan{
+    color: rgb(121, 121, 121);
+}
+.glassbottle{
+    color: rgb(16, 194, 0);
+}
+.cardboard{
+    color: rgb(112, 71, 0);
+}
+.tomorrow{
+    color:rgb(218, 0, 138);
+}
+.tonight{
+    color:rgb(255, 0, 0);
+    font-weight: 800;
+    letter-spacing: 1.4pt;
+    font-size: 1rem;
+}
+
+
+/* List of rooms */
+.houselist{
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid blue; */
+    margin: 10px 30px;
+}
+.house{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 5px 0;
+    align-items: center
+}
+
+.houselist .A{
+    border: 3px solid rgb(76, 103, 117);
+}
+.houselist .A .room{
+    border: 1px solid #228f72;
+}
+
+.houselist .B{
+    border: 3px solid rgb(76, 103, 117);
+}
+.houselist .B .room {
+    border: 1px solid #07A9D7;
+}
+
+.room {
+    display: flex;
+
+    border-radius: 10px;
+    width: 38vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 3px 3px;
+    background-color: rgba(181, 213, 254, 0.189);
+}
+
+.nameKanji{
+    font-size: 0.75rem;
+}
+.invalid{
+    color: red;
+}
+.now{
+    font-size: 0.65rem;
+    color: red;
+    font-weight: 500;
+}
+.next{
+    font-size: 0.55rem;
+    color: green;
+    font-style: italic;
+}
+.last{
+    font-size: 0.55rem;
+    color: rgba(71, 86, 108, 0.638);
+    font-style: italic;
+}
+
+/* Login Button */
+.login{
+    margin: 0 10px;
+    width: 170px;
+    height: 33px;
+    font-size: 1.2rem;
+}
+
+
+/* Footer of the page */
+.foot{
+    display: flex;
+    justify-content: center;
+    font-size: 0.7rem;
+}
+
+
+
+
+
+
+
+/* Animations */
+#daygarbage{
+    width: max-content;
+}
