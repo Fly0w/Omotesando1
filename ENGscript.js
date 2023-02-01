@@ -241,23 +241,21 @@ const changeResidentLineStatus = (room) =>{
 
 // Buttons
 
-    //English Button
-const buttonEnglish = document.getElementById("english");
-buttonEnglish.addEventListener("click", 
-    function englishVersion(){
-        console.log("OK1");
-        // location.replace(LIEN DE LA VERSION ANGLAISE);
-    }
-);
-
-    //Japanese Button
-const buttonJapanese = document.getElementById("japanese");
-buttonJapanese.addEventListener("click", 
-    function japaneseVersion(){
-        console.log("OK");
-        // location.replace(LIEN DE LA VERSION JAPONAISE);
-    }
-);
+    // //English Button
+    // const buttonEnglish = document.getElementById("english");
+    // buttonEnglish.addEventListener("click", 
+    //     function englishVersion(){
+    //         location.replace("https://fly0w.github.io/Omotesando1/");
+    //     }
+    // );
+    
+        //Japanese Button
+    const buttonJapanese = document.getElementById("japanese");
+    buttonJapanese.addEventListener("click", 
+        function japaneseVersion(){
+            location.replace("https://fly0w.github.io/Omotesando1JAP/");
+        }
+    );
 
 
 
