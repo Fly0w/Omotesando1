@@ -121,8 +121,8 @@ let rooms = {
         isGarbageWeek: false
     },
     B102:{
-        residentName: 'Markus',
-        residentNameKanji: 'マーカス',
+        residentName: '',
+        residentNameKanji: '',
         residentUserName: '',
         residentPassword: '',
         residentBirthday: '',
