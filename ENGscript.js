@@ -121,8 +121,8 @@ let rooms = {
         isGarbageWeek: false
     },
     B102:{
-        residentName: '',
-        residentNameKanji: '',
+        residentName: 'Rodrigo',
+        residentNameKanji: 'ロド',
         residentUserName: '',
         residentPassword: '',
         residentBirthday: '',
@@ -472,24 +472,3 @@ const updateHTMLGarbageTurn = () => {
 }
 
 updateHTMLGarbageTurn();
-
-
-// //Login Button
-// const buttonLogin = document.getElementById("buttonLogin");
-
-// buttonLogin.addEventListener("click", 
-//     function loginRedirect(){
-//         let room = document.getElementById("roomNo").value;
-//         let userName = document.getElementById("userName").value;
-//         let password = document.getElementById("password").value;
-
-//         if (userName === rooms[room].residentUserName && password === rooms[room].residentPassword) {
-//             console.log("C'est bon !");       
-//             document.getElementsByClassName("invalid")[0].innerHTML= "" ; 
-//             // location.replace(LIEN DE LA PAGE);
-//         } else {
-//             console.log("Tu rentres pas !");
-//             document.getElementsByClassName("invalid")[0].innerHTML= "Username or Password invalid" ;
-//         }
-//     }
-// );
