@@ -238,24 +238,23 @@ const changeResidentLineStatus = (room) =>{
     rooms[room].isLineLinked = !rooms[room].isLineLinked;
 }
 
-
 // Buttons
 
-    // //English Button
-    // const buttonEnglish = document.getElementById("english");
-    // buttonEnglish.addEventListener("click", 
-    //     function englishVersion(){
-    //         location.replace("https://fly0w.github.io/Omotesando1/");
-    //     }
-    // );
-    
-        //Japanese Button
-const buttonJapanese = document.getElementById("japanese");
-buttonJapanese.addEventListener("click", 
-    function japaneseVersion(){
-        location.replace("./jap_ver.html");
+    //English Button
+const buttonEnglish = document.getElementById("english");
+buttonEnglish.addEventListener("click", 
+    function englishVersion(){
+        location.replace("./index.html");
     }
 );
+
+//     //Japanese Button
+// const buttonJapanese = document.getElementById("japanese");
+// buttonJapanese.addEventListener("click", 
+//     function japaneseVersion(){
+//         location.replace("https://fly0w.github.io/Omotesando1JAP/");
+//     }
+// );
 
 
 //Home page Room names
@@ -264,7 +263,6 @@ const addNamesToHTML = () => {
     let HTMLnamesKanji = document.getElementsByClassName("nameKanji");
     let names = [];
     let namesKanji = [];
-
 
     Object.entries(rooms).forEach(value => {
         names.push(value[1].residentName);
@@ -280,8 +278,6 @@ const addNamesToHTML = () => {
 //Garbage turn status
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-
-// Function that lists the type of garbage and displays it depending on the day
 const updateListGarbageTurn = () => {
     const dateNow = new Date();
     let today = weekday[dateNow.getDay()];
@@ -296,46 +292,46 @@ const updateListGarbageTurn = () => {
 
     switch (today){
         case "Monday":
-            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">COMBUSTIBLE</li></ul>';
+            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">燃えるゴミ</li></ul>';
             HTMLannounceDayGarbage.className = "animate__animated animate__pulse animate__infinite content tonight"
-            HTMLannounceDayGarbage.innerHTML = 'TONIGHT';
-            HTMLannounceDayToday.innerHTML = 'MONDAY - ' + fulldate;
+            HTMLannounceDayGarbage.innerHTML = '今日の夜';
+            HTMLannounceDayToday.innerHTML = '月　- ' + fulldate;
             break;
         case "Tuesday":
-            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="noncombustible">NON-COMBUSTIBLE</li><li class="petbottle">PET BOTTLES</li><li class="glassbottle">GLASS BOTTLES</li><li class="aluminumcan">ALUMINUM CANS</li><li class="cardboard">CARDBOARD</li></ul>';
+            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="noncombustible">燃えないゴミ</li><li class="petbottle">ペットボトル</li><li class="glassbottle">びん</li><li class="aluminumcan">かん</li><li class="cardboard">ダンボール</li></ul>';
             HTMLannounceDayGarbage.className = "content tomorrow"
-            HTMLannounceDayGarbage.innerHTML = 'TOMORROW NIGHT';
-            HTMLannounceDayToday.innerHTML = 'TUESDAY - ' + fulldate;
+            HTMLannounceDayGarbage.innerHTML = '明日の夜';
+            HTMLannounceDayToday.innerHTML = '火 - ' + fulldate;
             break;
         case "Wednesday":
-            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="noncombustible">NON-COMBUSTIBLE</li><li class="petbottle">PET BOTTLES</li><li class="glassbottle">GLASS BOTTLES</li><li class="aluminumcan">ALUMINUM CANS</li><li class="cardboard">CARDBOARD</li></ul>';
+            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="noncombustible">燃えないゴミ</li><li class="petbottle">ペットボトル</li><li class="glassbottle">びん</li><li class="aluminumcan">かん</li><li class="cardboard">ダンボール</li></ul>';
             HTMLannounceDayGarbage.className = "animate__animated animate__pulse animate__infinite content tonight"
-            HTMLannounceDayGarbage.innerHTML = 'TONIGHT';
-            HTMLannounceDayToday.innerHTML = 'WEDNESDAY - ' + fulldate;
+            HTMLannounceDayGarbage.innerHTML = '今日の夜';
+            HTMLannounceDayToday.innerHTML = '水 - ' + fulldate;
             break;
         case "Thursday":
-            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">COMBUSTIBLE</li></ul>';
+            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">燃えるゴミ</li></ul>';
             HTMLannounceDayGarbage.className = "animate__animated animate__pulse animate__infinite content tonight"
-            HTMLannounceDayGarbage.innerHTML = 'TONIGHT';
-            HTMLannounceDayToday.innerHTML = 'THURSDAY - ' + fulldate;
+            HTMLannounceDayGarbage.innerHTML = '今日の夜';
+            HTMLannounceDayToday.innerHTML = '木 - ' + fulldate;
             break;
         case "Friday":
-            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">COMBUSTIBLE</li></ul>';
+            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">燃えるゴミ</li></ul>';
             HTMLannounceDayGarbage.className = "content"
-            HTMLannounceDayGarbage.innerHTML = 'MONDAY NIGHT';
-            HTMLannounceDayToday.innerHTML = 'FRIDAY - ' + fulldate;
+            HTMLannounceDayGarbage.innerHTML = '月曜日の夜';
+            HTMLannounceDayToday.innerHTML = '金 - ' + fulldate;
             break;
         case "Saturday":
-            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">COMBUSTIBLE</li></ul>';
+            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">燃えるゴミ</li></ul>';
             HTMLannounceDayGarbage.className = "content"
-            HTMLannounceDayGarbage.innerHTML = 'MONDAY NIGHT';
-            HTMLannounceDayToday.innerHTML = 'SATURDAY - ' + fulldate;
+            HTMLannounceDayGarbage.innerHTML = '月曜日の夜';
+            HTMLannounceDayToday.innerHTML = '土 - ' + fulldate;
             break;
         case "Sunday":
-            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">COMBUSTIBLE</li></ul>';
+            HTMLannounceTypeGarbage.innerHTML = '<ul><li class="combustible">燃えるゴミ</li></ul>';
             HTMLannounceDayGarbage.className = "content tomorrow"
-            HTMLannounceDayGarbage.innerHTML = 'TOMORROW NIGHT';
-            HTMLannounceDayToday.innerHTML = 'SUNDAY - ' + fulldate;
+            HTMLannounceDayGarbage.innerHTML = '明日の夜';
+            HTMLannounceDayToday.innerHTML = '日 - ' + fulldate;
             break;
         default:
             HTMLannounceTypeGarbage.innerHTML = "Error";
@@ -513,24 +509,24 @@ const updateHTMLGarbageTurn = () => {
         turnsLastWeek.push(value[1].isLastTimeGarbage);
         turnsNextWeek.push(value[1].isNextTimeGarbage);
         if (value[1].isGarbageWeek === true){
-            thisWeekResp.push(value[1].residentName)
+            thisWeekResp.push(value[1].residentNameKanji)
         } else if (value[1].isLastTimeGarbage === true){
-            lastWeekResp.push(value[1].residentName)
+            lastWeekResp.push(value[1].residentNameKanji)
         } else if (value[1].isNextTimeGarbage === true){
-            nextWeekResp.push(value[1].residentName)
+            nextWeekResp.push(value[1].residentNameKanji)
         }
     });
         
     //Loop that adds text and style in the room boxes depending on the garbage turn
     for (let i = 0; i < HTMLturn.length; i++){ 
         if (turnsNow[i] === true){
-            HTMLturn[i].innerHTML = "It's your garbage turn !";
+            HTMLturn[i].innerHTML = "今週のゴミ担当";
             HTMLturn[i].classList.add("nowgar");
         } else if (turnsLastWeek[i] === true){
-            HTMLturn[i].innerHTML = "Was last garbage turn";
+            HTMLturn[i].innerHTML = "先週のゴミ担当";
             HTMLturn[i].classList.add("lastgar");
         } else if (turnsNextWeek[i] === true){
-            HTMLturn[i].innerHTML = "Is next garbage turn";
+            HTMLturn[i].innerHTML = "来週のゴミ担当";
             HTMLturn[i].classList.add("nextgar");
         } else {
             HTMLturn[i].innerHTML = "";
@@ -566,24 +562,24 @@ const updateHTMLGroceriesTurn = () => {
         turnsLastMonth.push(value[1].isLastTimeGroceries);
         turnsNextMonth.push(value[1].isNextTimeGroceries);
         if (value[1].isGrocery === true){
-            thisMonthResp.push(value[1].residentName)
+            thisMonthResp.push(value[1].residentNameKanji)
         } else if (value[1].isLastTimeGroceries === true){
-            lastMonthResp.push(value[1].residentName)
+            lastMonthResp.push(value[1].residentNameKanji)
         } else if (value[1].isNextTimeGroceries === true){
-            nextMonthResp.push(value[1].residentName)
+            nextMonthResp.push(value[1].residentNameKanji)
         }
     });
         
     //Loop that adds text and style in the room boxes depending on the groceries turn
     for (let i = 0; i < HTMLturnGro.length; i++){ 
         if (turnsNow[i] === true){
-            HTMLturnGro[i].innerHTML = "It's your groceries turn !";
+            HTMLturnGro[i].innerHTML = "今月の買い物担当";
             HTMLturnGro[i].classList.add("nowgro");
         } else if (turnsLastMonth[i] === true){
-            HTMLturnGro[i].innerHTML = "Was last groceries turn";
+            HTMLturnGro[i].innerHTML = "先月の買い物担当";
             HTMLturnGro[i].classList.add("lastgro");
         } else if (turnsNextMonth[i] === true){
-            HTMLturnGro[i].innerHTML = "Is next groceries turn";
+            HTMLturnGro[i].innerHTML = "来月の買い物担当";
             HTMLturnGro[i].classList.add("nextgro");
         } else {
             HTMLturnGro[i].innerHTML = "";
@@ -599,6 +595,6 @@ const updateHTMLGroceriesTurn = () => {
     // console.log(HTMLannounceThisMonth, HTMLannounceLastMonth, HTMLannounceNextMonth)
 }
 
-addNamesToHTML();
 updateHTMLGarbageTurn();
 updateHTMLGroceriesTurn();
+addNamesToHTML();
