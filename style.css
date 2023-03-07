@@ -92,6 +92,7 @@
 
 .bold{
     font-weight: 600;
+    font-size: 1.1rem;
 }
 
 ul{
@@ -129,7 +130,7 @@ li {
 }
 
 #weekresp , #monthresp{
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: rgb(0, 34, 75);
 }
 /* List of rooms */
@@ -179,33 +180,33 @@ li {
     color: red;
 }
 .nowgar{
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: red;
     font-weight: 500;
 }
 .nextgar{
-    font-size: 0.55rem;
+    font-size: 0.45rem;
     color: rgba(235, 48, 48, 0.729);
     font-style: italic;
 }
 .lastgar{
-    font-size: 0.55rem;
+    font-size: 0.45rem;
     color: rgba(137, 0, 0, 0.712);
     font-style: italic;
 }
 
 .nowgro{
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: rgb(0, 166, 221);
     font-weight: 500;
 }
 .nextgro{
-    font-size: 0.55rem;
+    font-size: 0.45rem;
     color: rgba(0, 145, 171, 0.748);
     font-style: italic;
 }
 .lastgro{
-    font-size: 0.55rem;
+    font-size: 0.45rem;
     color: rgba(111, 140, 255, 0.753);
     font-style: italic;
 }
