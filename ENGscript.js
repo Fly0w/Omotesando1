@@ -5,6 +5,9 @@ let rooms = {
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
+        isLastTimeGroceries: false,
+        isNextTimeGroceries: false,
+        isGrocery: false,
         isLastTimeGarbage: false,
         isNextTimeGarbage: false,
         isLineLinked: false,
@@ -24,6 +27,9 @@ let rooms = {
     A1022:{
         residentName: 'Florian',
         residentNameKanji: 'フロリアン',
+        isLastTimeGroceries: false,
+        isNextTimeGroceries: false,
+        isGrocery: false,
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -49,6 +55,11 @@ let rooms = {
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
+        residentName: 'Maya',
+        residentNameKanji: 'マヤ',
+        isLastTimeGroceries: false,
+        isNextTimeGroceries: false,
+        isGrocery: false,
         isLastTimeGarbage: false,
         isNextTimeGarbage: false,
         isLineLinked: false,
@@ -57,6 +68,9 @@ let rooms = {
     A203:{
         residentName: 'Shonosuke',
         residentNameKanji: '祥之介',
+        isLastTimeGroceries: false,
+        isNextTimeGroceries: false,
+        isGrocery: false,
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -71,6 +85,9 @@ let rooms = {
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
+        isLastTimeGroceries: false,
+        isNextTimeGroceries: false,
+        isGrocery: false,
         isLastTimeGarbage: false,
         isNextTimeGarbage: false,
         isLineLinked: false,
@@ -79,6 +96,9 @@ let rooms = {
     A205:{
         residentName: 'Diana',
         residentNameKanji: 'ダヤナ',
+        isLastTimeGroceries: false,
+        isNextTimeGroceries: false,
+        isGrocery: false,
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -93,6 +113,9 @@ let rooms = {
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
+        isLastTimeGroceries: false,
+        isNextTimeGroceries: false,
+        isGrocery: false,
         isLastTimeGarbage: false,
         isNextTimeGarbage: false,
         isLineLinked: false,
@@ -101,6 +124,9 @@ let rooms = {
     A2062:{
         residentName: 'Revy',
         residentNameKanji: 'レヴィ',
+        isLastTimeGroceries: false,
+        isNextTimeGroceries: false,
+        isGrocery: false,
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -416,6 +442,7 @@ const updateDuoGroceries = () => {
 
         //English Version
 
+// Function that lists the type of garbage and displays it depending on the day
 // Function that lists the type of garbage and displays it depending on the day
 const updateListGarbageTurn = () => {
     const dateNow = new Date();
