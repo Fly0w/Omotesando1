@@ -66,8 +66,8 @@ let rooms = {
         isGarbageWeek: false
     },
     A203:{
-        residentName: 'Shonosuke',
-        residentNameKanji: '祥之介',
+        residentName: '---',
+        residentNameKanji: '---',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -108,8 +108,8 @@ let rooms = {
         isGarbageWeek: false
     },
     A2061:{
-        residentName: 'Aika',
-        residentNameKanji: '愛香',
+        residentName: 'Mizuki',
+        residentNameKanji: 'ミズキ',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -316,10 +316,10 @@ const updateDuoGarbage = () => {
         ['B204', 'A101'],
         ['A1021', 'A1022'],
         ['A201', 'A202'],
-        ['A203', 'A204'],
-        ['A205', 'B101'],
+        ['A205', 'A204'],
+        ['B102', 'B101'],
         ['A2061', 'A2062'],
-        ['B102', 'B103'],
+        ['A203', 'B103'],
     ];
 
 // This week
