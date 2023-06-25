@@ -50,13 +50,11 @@ let rooms = {
         isGarbageWeek: false
     },
     A202:{
-        residentName: 'Maya',
-        residentNameKanji: 'マヤ',
+        residentName: '---',
+        residentNameKanji: '---',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
-        residentName: 'Maya',
-        residentNameKanji: 'マヤ',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -66,8 +64,8 @@ let rooms = {
         isGarbageWeek: false
     },
     A203:{
-        residentName: '---',
-        residentNameKanji: '---',
+        residentName: 'Maya',
+        residentNameKanji: 'マヤ',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -122,8 +120,8 @@ let rooms = {
         isGarbageWeek: false
     },
     A2062:{
-        residentName: 'Revy',
-        residentNameKanji: 'レヴィ',
+        residentName: '---',
+        residentNameKanji: '---',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -169,8 +167,8 @@ let rooms = {
         isGarbageWeek: false
     },
     B104:{
-        residentName: 'Aya',
-        residentNameKanji: 'アヤ',
+        residentName: '---',
+        residentNameKanji: '---',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -298,7 +296,8 @@ const updateDuoGarbage = () => {
     
     
     //Definition of the key for the array
-    let modulo = difDateWeek % 9; 
+    let offset = 1;
+    let modulo = offset + difDateWeek % 9; 
     let moduloPlus = modulo + 1; //For next week key
     let moduloMinus = modulo - 1; //For last week key
     //The key can't be more than 8 or less than 0
