@@ -50,8 +50,8 @@ let rooms = {
         isGarbageWeek: false
     },
     A202:{
-        residentName: '---',
-        residentNameKanji: '---',
+        residentName: 'Kai',
+        residentNameKanji: '海舟',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -120,8 +120,8 @@ let rooms = {
         isGarbageWeek: false
     },
     A2062:{
-        residentName: '---',
-        residentNameKanji: '---',
+        residentName: 'Jessica',
+        residentNameKanji: 'ジェシカ',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
@@ -282,33 +282,39 @@ const addNamesToHTML = () => {
     }
 };
 
+const now = new Date();
+const startDateMs = Date.parse("January 1, 2023");
+const nowDateMs = now.getTime();
+// const nowDateMs = Date.parse("January 8, 2023");
+let difDateMs = nowDateMs-startDateMs ; //Number of ms between January 1st 2023 and now
+const weekMs = 1000 * 60 * 60 * 24 * 7; 
+const difDateWeek = Math.floor(difDateMs / weekMs); //Number of weeks since Sunday 1st of January 2023
+
+//Definition of the key for the array
+let offset = 1;
+let modulo = (difDateWeek % 9) + offset; 
+    
+let moduloPlus = modulo + 1; //For next week key
+let moduloMinus = modulo - 1; //For last week key
+
+//The key can't be more than 8 or less than 0
+if (modulo >=9){
+    modulo = 0;
+} 
+
+if (modulo === 8){
+    moduloPlus = 0;
+    moduloMinus = 7;
+} else if (modulo === 0){
+    moduloPlus = 1;
+    moduloMinus = 8;
+} 
+
 //Garbage turn status
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 const updateDuoGarbage = () => {
-    const now = new Date();
-    const startDateMs = Date.parse("January 1, 2023");
-    const nowDateMs = now.getTime();
-    // const nowDateMs = Date.parse("January 8, 2023");
-    let difDateMs = nowDateMs-startDateMs ; //Number of ms between January 1st 2023 and now
-    const weekMs = 1000 * 60 * 60 * 24 * 7; 
-    const difDateWeek = Math.floor(difDateMs / weekMs); //Number of weeks since Sunday 1st of January 2023
-    
-    
-    //Definition of the key for the array
-    let offset = 1;
-    let modulo = offset + difDateWeek % 9; 
-    let moduloPlus = modulo + 1; //For next week key
-    let moduloMinus = modulo - 1; //For last week key
-    //The key can't be more than 8 or less than 0
-    if (modulo === 8){
-        moduloPlus = 0;
-        moduloMinus = 7;
-    } else if (modulo === 0){
-        moduloPlus = 1;
-        moduloMinus = 8;
-    };
-
+    console.log(modulo)
     const duoRooms = [
         ['B104', 'B201'],
         ['B202', 'B203'],
@@ -323,6 +329,7 @@ const updateDuoGarbage = () => {
 
 // This week
     let thisWeek1 = duoRooms[modulo][0];
+    
     let thisWeek2 = duoRooms[modulo][1];
 
     rooms[thisWeek1].isGarbageWeek = true;
