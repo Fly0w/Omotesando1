@@ -92,8 +92,8 @@ let rooms = {
         isGarbageWeek: false
     },
     A205:{
-        residentName: 'Diana',
-        residentNameKanji: 'ダヤナ',
+        residentName: 'Chie',
+        residentNameKanji: 'チエ',
         isLastTimeGroceries: false,
         isNextTimeGroceries: false,
         isGrocery: false,
